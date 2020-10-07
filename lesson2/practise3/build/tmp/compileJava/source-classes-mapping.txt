@@ -1,0 +1,6 @@
+com/codegym/controller/Test.java
+ com.codegym.controller.Test
+com/codegym/config/AppConfiguration.java
+ com.codegym.config.AppConfiguration
+com/codegym/config/AppInitializer.java
+ com.codegym.config.AppInitializer
