@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Wellcome</h1>
+   <table th:object="${user}">
+       <tr>
+           <td>name</td>
+           <td>
+               <input type="text" th:field="*{name}">
+           </td>
+       </tr>
+       <tr>
+           <td>account</td>
+           <td>
+               <input type="text" th:field="*{account}">
+
+           </td>
+       </tr>
+       <tr>
+           <td>password</td>
+           <td>
+               <input type="text" th:field="*{password}">
+
+           </td>
+       </tr>
+       <tr>
+           <td>email</td>
+           <td>
+               <input type="text" th:field="*{email}">
+
+           </td>
+       </tr>
+       <tr>
+           <td>age</td>
+           <td>
+               <input type="text" th:field="*{age}">
+
+           </td>
+       </tr>
+   </table>
+</div>
+</body>
+</html>
