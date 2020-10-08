@@ -1,0 +1,16 @@
+com/codegym/c0320h1/config/AppConfiguration.java
+ com.codegym.c0320h1.config.AppConfiguration
+com/codegym/c0320h1/config/AppInitializer.java
+ com.codegym.c0320h1.config.AppInitializer
+com/codegym/c0320h1/service/student/StudentService.java
+ com.codegym.c0320h1.service.student.StudentService
+com/codegym/c0320h1/service/IService.java
+ com.codegym.c0320h1.service.IService
+com/codegym/c0320h1/model/Student.java
+ com.codegym.c0320h1.model.Student
+com/codegym/c0320h1/service/student/IStudentService.java
+ com.codegym.c0320h1.service.student.IStudentService
+com/codegym/c0320h1/controller/StudentController.java
+ com.codegym.c0320h1.controller.StudentController
+com/codegym/c0320h1/model/StudentForm.java
+ com.codegym.c0320h1.model.StudentForm

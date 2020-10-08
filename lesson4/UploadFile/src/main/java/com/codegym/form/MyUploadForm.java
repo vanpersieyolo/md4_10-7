@@ -1,2 +1,4 @@
-package com.codegym.form;public class MyUploadForm {
+package com.codegym.form;
+
+public class MyUploadForm {
 }

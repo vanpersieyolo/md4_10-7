@@ -4,12 +4,11 @@
 <body>
 <h3>Modify Customer</h3>
 <p>
-    <a th:href="@{/}">
+    <a th:href="@{/product}">
         Back to customer list
     </a>
 </p>
 <div id="form" th:object="${product}">
-
         <div>
             <label>Id</label>
             <input type="text" disabled th:field="*{productId}"/>

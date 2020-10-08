@@ -41,12 +41,12 @@ public class ProductController {
         return "Update";
     }
     @PostMapping("/product/update")
-    public String formUpdate(@ModelAttribute("product") Product product, Model model){
+    public String update(@ModelAttribute("product") Product product){
         productService.update(product);
         return "redirect:/product";
     }
     @GetMapping("/product/{id}/delete")
-    public String delete(@PathVariable int id, Model model ){
+    public String delete(@PathVariable int id ){
         productService.remove(id);
         return "redirect:/product";
     }

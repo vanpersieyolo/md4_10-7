@@ -1,2 +1,4 @@
-package com.codegym.model;public class ProductForm {
+package com.codegym.model;
+
+public class ProductForm {
 }

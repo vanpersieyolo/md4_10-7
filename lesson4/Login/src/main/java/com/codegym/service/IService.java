@@ -1,2 +1,4 @@
-package com.codegym.service;public interface IService {
+package com.codegym.service;
+
+public interface IService {
 }

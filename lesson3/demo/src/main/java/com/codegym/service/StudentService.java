@@ -8,7 +8,8 @@ import java.util.List;
 public class StudentService implements IStudent {
     private static List<Student> studentList = new ArrayList<>();
     static{
-        studentList.add(new Student(1,"Văn","Hà Nội"));
+        String name = "Hà Nội";
+        studentList.add(new Student(1,"Văn",name));
         studentList.add(new Student(2,"Văn","Hà Nội"));
         studentList.add(new Student(3,"Văn","Hà Nội"));
         studentList.add(new Student(4,"Văn","Hà Nội"));
@@ -29,7 +30,7 @@ public class StudentService implements IStudent {
     @Override
     public void edit(Student student) {
         for (Student s : studentList) {
-            if (s.getId()==student.getId()){
+            if (student.getId() == s.getId()){
                 s.setName(student.getName());
                 s.setAddress(student.getAddress());
             }
@@ -41,6 +42,7 @@ public class StudentService implements IStudent {
         for (Student s : studentList) {
             if (s.getId() == id){
                 studentList.remove(s);
+                return;
             }
         }
     }
