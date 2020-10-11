@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>thông tin nhân viên</title>
+</head>
+<body>
+    <h1>Thông tin nhân viên</h1>
+    <table th:object="${employee}">
+        <tr>
+            <td>Id nhân viên: </td>
+            <td>
+                <input type="text" th:field="*{id}">
+            </td>
+        </tr>
+        <tr>
+            <td>Tên nhân viên: </td>
+            <td>
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+        <tr>
+            <td>sđt nhân viên: </td>
+            <td>
+                <input type="text" th:field="*{contactNumber}">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

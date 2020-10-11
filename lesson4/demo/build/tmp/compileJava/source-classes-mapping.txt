@@ -10,7 +10,7 @@ com/codegym/c0320h1/model/Student.java
  com.codegym.c0320h1.model.Student
 com/codegym/c0320h1/service/student/IStudentService.java
  com.codegym.c0320h1.service.student.IStudentService
-com/codegym/c0320h1/controller/StudentController.java
- com.codegym.c0320h1.controller.StudentController
 com/codegym/c0320h1/model/StudentForm.java
  com.codegym.c0320h1.model.StudentForm
+com/codegym/c0320h1/controller/StudentController.java
+ com.codegym.c0320h1.controller.StudentController

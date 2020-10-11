@@ -25,7 +25,6 @@ public class StudentController {
 
     @GetMapping()
     public ModelAndView index(){
-
         ModelAndView mav = new ModelAndView("student/list");
         mav.addObject("list", studentService.findAll());
         return mav;
@@ -60,12 +59,7 @@ public class StudentController {
         //1 gan student nhung thuoc tinh cua studentForm
         Student student = new Student(studentForm.getName(), studentForm.getAddress());
         MultipartFile file = studentForm.getImage();
-        String image = file.getOriginalFilename();
-        student.setImage(image);
-        String fileUpload = environment.getProperty("file_upload").toString();
-        try {
-            FileCopyUtils.copy(file.getBytes(), new File(fileUpload + image));
-        } catch (IOException e) {
+        x`
             e.printStackTrace();
         }
 
