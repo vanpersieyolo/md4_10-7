@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.Iterator;
+
 @Controller
 public class FileController {
     @Autowired
@@ -35,6 +37,17 @@ public class FileController {
     @GetMapping("/delete/id={id}")
     public String delete(@PathVariable("id") int id){
         studentService.delete(id);
+        return "redirect:/student";
+    }
+    @GetMapping("/edit/id={id}")
+    public String editform(@PathVariable("id") int id, Model model){
+        Student student = studentService.findById(id);
+        model.addAttribute("student",student);
+        return "detail";
+    }
+    @PostMapping("/update")
+    public String edit( Student student , Model model){
+        studentService.update(student);
         return "redirect:/student";
     }
 

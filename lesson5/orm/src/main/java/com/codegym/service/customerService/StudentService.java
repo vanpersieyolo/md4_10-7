@@ -8,12 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.util.Map.Entry;
 
 public class StudentService implements IStudentService {
     @Autowired
     private SessionFactory sessionFactory;
-    @Autowired
-    private EntityManager entityManager;
 
     public Iterable<Student> findAll() {
         EntityManager entityManager = sessionFactory.createEntityManager();
@@ -68,6 +67,28 @@ public class StudentService implements IStudentService {
                 transaction.rollback();
             }
         }
+        return null;
+    }
+
+    @Override
+    public Student update(Student student) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.merge(student);
+            transaction.commit();
+            return student;
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null)
+                transaction.rollback();
+        } finally {
+            if (session != null)
+                session.close();
+        }
+
         return null;
     }
 }
